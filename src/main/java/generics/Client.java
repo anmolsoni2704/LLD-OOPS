@@ -1,5 +1,8 @@
 package main.java.generics;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Client {
     public static void main(String[] args) {
         Pair p1 = new Pair();
@@ -35,6 +38,40 @@ public class Client {
         Static methods cannot refer a class level generic data type as to call
         these method, we don't need the object because of which we will not be
         able to know the respective data types you're referring to.
+         */
+
+
+//        ---------------------------Inheritance and Generics -----------------------------
+        Utils.simpleDoSomething(new Animal());
+        Utils.simpleDoSomething(new Dog());
+        Utils.simpleDoSomething(new Cat());
+
+        List<Dog> dogs = new ArrayList<>();
+        dogs.add(new Dog());
+        dogs.add(new Dog());
+        dogs.add(new Dog());
+
+        List<Cat> cats = new ArrayList<>();
+        cats.add(new Cat());
+        cats.add(new Cat());
+        cats.add(new Cat());
+
+        List<Animal> animals = new ArrayList<>();
+
+        Utils.doSomething(animals);
+        Utils.doSomething(dogs);
+        Utils.doSomething(cats);
+
+        Utils.doSomething2(animals);
+        Utils.doSomething2(dogs);
+        Utils.doSomething2(cats);
+
+        Utils.printAnimalName(animals);
+        Utils.printAnimalName(dogs);
+        Utils.printAnimalName(cats);
+        /*
+        We cannot store List<Dog> in List<Animal> - Not allowed
+        we can store only Dog in Animal
          */
     }
 }
