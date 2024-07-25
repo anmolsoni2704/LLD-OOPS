@@ -48,7 +48,7 @@ public class Client {
         List<String> list4 = new Stack<>();
 
         /*
-        Set Interface - Hashset, LinkedHashset, TreeSet, TreeSet, EnumSet
+        Set Interface - Hashset, LinkedHashset, TreeSet, EnumSet
         No duplicate elements are allowed.
         Constant time operations for search, insert, delete - O(1)
         None of them are thread safe.
@@ -74,13 +74,6 @@ public class Client {
         set3.add("Aditi");
         System.out.println(set3);
 
-        //Natural order is maintained
-        Set<String> set4 = new TreeSet<>();
-        set4.add("Anmol");
-        set4.add("Akash");
-        set4.add("Aditi");
-        System.out.println(set4);
-
         /*
         Enums - Enums are constants.
         Whenever you have some predefined strings or constants, we use enums.
@@ -102,7 +95,7 @@ public class Client {
         System.out.println(set7);
 
         /*
-        Queue - Priority Queue,
+        Queue - Priority Queue, Deque
          */
 
         Queue<String> queue1 = new PriorityQueue<>(new Comparator<String>() {
